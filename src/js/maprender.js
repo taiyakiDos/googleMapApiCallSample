@@ -38,7 +38,7 @@ function getData(json) {
         }
         // クリック時に開く infoウィンドウ の追加
         info[i] = new google.maps.InfoWindow({
-            content: '<div class="sample">'+jsonObj[i]['name']+'</div>'
+            content: '<div class="infoText">'+jsonObj[i]['name']+'</div><input type="text" onclick="this.select(0,this.value.length)" value="'+jsonObj[i]['address']+'" readonly>'
         });
         // マーカーのクリックイベントを追加
         markerClickEvent(i);
